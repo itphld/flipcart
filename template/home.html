@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<div class="row">
+
+	{%for product in products%}
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{product.get_urls}}" class="img-wrap"> <img src="{{product.pro_img.url}}"> </a>
+			<figcaption class="info-wrap">
+				<a href="{{product.get_urls}}" class="title">{{product.description}}</a>
+				<div class="price mt-1">{{product.price}}</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div>
+{%endfor%}
+	 <!-- col.// -->
+
+
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+{%endblock%}
